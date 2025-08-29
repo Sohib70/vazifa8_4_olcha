@@ -78,15 +78,13 @@ TEMPLATES = [
 WSGI_APPLICATION = 'conf.wsgi.application'
 
 REST_FRAMEWORK = {
-    # Authentication usullari
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+
     'DEFAULT_AUTHENTICATION_CLASSES': [
 
         'rest_framework.authentication.TokenAuthentication',
-    ],
-
-
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
     ]
 }
 
@@ -125,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
 
